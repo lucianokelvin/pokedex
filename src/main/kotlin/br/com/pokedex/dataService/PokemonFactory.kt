@@ -1,9 +1,9 @@
 package br.com.pokedex.dataService
 
-import br.com.pokedex.PokemonNotFoundException
 import br.com.pokedex.domain.Pokemon
 import br.com.pokedex.domain.PokemonInstance
 import br.com.pokedex.domain.Type
+import br.com.pokedex.exceptions.PokemonNotFoundException
 
 class PokemonFactory {
 
@@ -16,6 +16,10 @@ class PokemonFactory {
             }
 
             throw PokemonNotFoundException("Pokemon Not found")
+        }
+
+        fun all(): List<Pokemon> {
+            return this.pokemons
         }
 
         fun getInstance(name: String): PokemonInstance {

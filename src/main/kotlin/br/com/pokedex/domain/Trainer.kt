@@ -1,5 +1,6 @@
 package br.com.pokedex.domain
 
+import java.time.LocalDate
 import java.time.LocalDateTime
 
 data class Trainer(
@@ -7,7 +8,7 @@ data class Trainer(
 
         val name: String,
 
-        val birthDate: LocalDateTime,
+        val birthDate: LocalDate,
 
         val pokemons: Set<PokemonInstance> = hashSetOf(),
 
