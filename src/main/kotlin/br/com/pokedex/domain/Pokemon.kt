@@ -7,11 +7,11 @@ data class Pokemon(
 
         val generation: Long = 1L,
 
-        val type: Type,
+        val types: List<Type> = listOf(),
 
         val pre: Pokemon? = null,
 
         val evolution: Pokemon? = null,
 
-        val lendary: Boolean
+        val lendary: Boolean = false
 )

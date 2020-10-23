@@ -1,5 +1,5 @@
 package br.com.pokedex.domain
 
 enum class Type {
-    WATER, FIRE, GRASS
+    NORMAL, WATER, FIRE, GRASS, ELETRICITY, BUG, FLYING, POISON, FAIRY, GROUND, PSYCHIC, FIGHT, ROCK, STEEL, ICE, GHOST, DRAGON
 }
