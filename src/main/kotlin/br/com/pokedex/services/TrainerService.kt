@@ -7,7 +7,9 @@ import br.com.pokedex.domain.PokemonInstance
 import br.com.pokedex.domain.Trainer
 import br.com.pokedex.domain.Type
 import br.com.pokedex.exceptions.TrainerNotFoundException
+import org.springframework.stereotype.Service
 
+@Service
 class TrainerService {
 
     fun pokemonByTrainer(id: Long): Set<PokemonInstance>? {

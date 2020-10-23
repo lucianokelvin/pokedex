@@ -5,13 +5,14 @@ import br.com.pokedex.domain.PokemonInstance
 import br.com.pokedex.domain.Type
 import br.com.pokedex.exceptions.PokemonNotFoundException
 
+
 class PokemonFactory {
 
     companion object {
-        private lateinit var pokemons: MutableList<Pokemon>
+        private var pokemons: MutableList<Pokemon> = mutableListOf()
 
         fun get(name: String): Pokemon {
-            pokemons.find { it.name == name }?.let {
+            pokemons.find { it.name.equals(name, ignoreCase = false) }?.let {
                 return it
             }
 
@@ -23,11 +24,7 @@ class PokemonFactory {
         }
 
         fun getInstance(name: String): PokemonInstance {
-            pokemons.find { it.name == name }?.let {
-                return PokemonInstance(pokemon = it)
-            }
-
-            throw PokemonNotFoundException("Pokemon Not found")
+            return PokemonInstance(pokemon = get(name))
         }
 
         public fun fillList() {

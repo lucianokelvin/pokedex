@@ -8,10 +8,10 @@ import java.time.Month
 class TrainerFactory {
 
     companion object {
-        private lateinit var trainers: MutableList<Trainer>
+        private var trainers: MutableList<Trainer> = mutableListOf()
 
         fun get(name: String): Trainer {
-            trainers.find { it.name == name }?.let {
+            trainers.find { it.name.equals(name, ignoreCase = true) }?.let {
                 return it
             }
 

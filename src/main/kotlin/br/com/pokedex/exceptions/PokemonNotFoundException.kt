@@ -1,4 +1,4 @@
 package br.com.pokedex.exceptions
 
-class PokemonNotFoundException(message: String) : RuntimeException(message) {
+class PokemonNotFoundException(message: String = "Pokemon Not found") : RuntimeException(message) {
 }
