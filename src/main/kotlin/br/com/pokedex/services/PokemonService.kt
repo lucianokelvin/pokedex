@@ -20,5 +20,7 @@ class PokemonService {
         return pokemonFactory.get(name)
     }
 
-
+    fun all(): List<Pokemon> {
+        return pokemonFactory.all()
+    }
 }

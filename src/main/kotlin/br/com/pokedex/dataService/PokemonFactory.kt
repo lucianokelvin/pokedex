@@ -22,7 +22,7 @@ class PokemonFactory {
             return it
         }
 
-        throw PokemonNotFoundException("Pokemon Not found")
+        throw PokemonNotFoundException("Pokemon Não encontrado")
     }
 
     fun all(): List<Pokemon> {
@@ -127,9 +127,9 @@ class PokemonFactory {
         pokemons.add(Pokemon(name = "Muk", types = listOf(Type.POISON)))
         pokemons.add(Pokemon(name = "Shellder", types = listOf(Type.WATER)))
         pokemons.add(Pokemon(name = "Cloyster", types = listOf(Type.WATER, Type.ICE)))
-        pokemons.add(Pokemon(name = "Gastly", types = listOf(Type.GROUND, Type.POISON)))
-        pokemons.add(Pokemon(name = "Haunter", types = listOf(Type.GROUND, Type.POISON)))
-        pokemons.add(Pokemon(name = "Gengar", types = listOf(Type.GROUND, Type.POISON)))
+        pokemons.add(Pokemon(name = "Gastly", types = listOf(Type.GHOST, Type.POISON)))
+        pokemons.add(Pokemon(name = "Haunter", types = listOf(Type.GHOST, Type.POISON)))
+        pokemons.add(Pokemon(name = "Gengar", types = listOf(Type.GHOST, Type.POISON)))
         pokemons.add(Pokemon(name = "Onix", types = listOf(Type.ROCK, Type.GROUND)))
         pokemons.add(Pokemon(name = "Drowzee", types = listOf(Type.PSYCHIC)))
         pokemons.add(Pokemon(name = "Hypno", types = listOf(Type.PSYCHIC)))
