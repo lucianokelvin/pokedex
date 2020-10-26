@@ -18,7 +18,7 @@ class PokemonFactory {
     private var pokemons: MutableList<Pokemon> = mutableListOf()
 
     fun get(name: String): Pokemon {
-        pokemons.find { it.name.equals(name, ignoreCase = false) }?.let {
+        pokemons.find { it.name.equals(name, ignoreCase = true) }?.let {
             return it
         }
 
