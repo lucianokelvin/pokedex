@@ -34,6 +34,9 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
+tasks.getByName<Jar>("jar") {
+    enabled = true
+}
 
 tasks.withType<KotlinCompile> {
     kotlinOptions {
