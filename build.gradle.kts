@@ -36,6 +36,10 @@ tasks.withType<Test> {
 
 tasks.getByName<Jar>("jar") {
     enabled = true
+    manifest {
+        attributes["Manifest-Version"] = "1.0"
+        attributes["Main-Class"] = "br.com.pokedex.PokedexApplication"
+    }
 }
 
 tasks.withType<KotlinCompile> {

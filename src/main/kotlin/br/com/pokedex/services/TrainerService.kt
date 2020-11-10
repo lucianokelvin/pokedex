@@ -9,6 +9,7 @@ import br.com.pokedex.domain.Type
 import br.com.pokedex.exceptions.TrainerNotFoundException
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
+import java.time.LocalDate
 
 @Service
 class TrainerService {
@@ -38,8 +39,14 @@ class TrainerService {
         return pokemonFactory.all().filter { it.id == id }
     }
 
-    fun pokemonByName(name: String): List<Pokemon> {
-        return pokemonFactory.all().filter { it.name == name }
+    fun byName(name: String): Trainer {
+        return trainerFactory.getByName(name)
+    }
+
+    fun byAge(age: Long): List<Trainer> {
+        var value = LocalDate.now().year - trainerFactory.all().first().birthDate.year
+
+        return trainerFactory.all().filter { (LocalDate.now().year - it.birthDate.year) == age.toInt() }
     }
 
 

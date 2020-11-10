@@ -14,4 +14,8 @@ data class Pokemon(
         val evolution: Pokemon? = null,
 
         val lendary: Boolean = false
-)
+) {
+    override fun toString(): String {
+        return "Pokemon(id=$id, name='$name', generation=$generation, types=$types)"
+    }
+}

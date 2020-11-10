@@ -21,7 +21,7 @@ class TrainerFactory {
 
     private var trainers: MutableList<Trainer> = mutableListOf()
 
-    fun get(name: String): Trainer {
+    fun getByName(name: String): Trainer {
         trainers.find { it.name.equals(name, ignoreCase = true) }?.let {
             return it
         }

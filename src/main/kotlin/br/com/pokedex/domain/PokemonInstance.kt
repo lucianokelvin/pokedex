@@ -12,4 +12,8 @@ data class PokemonInstance(
         val level: Long = 1L,
 
         val captureDate: LocalDateTime? = LocalDateTime.now()
-)
+){
+    override fun toString(): String {
+        return "PokemonInstance(id=$id, pokemon=${pokemon.name}, trainer=${trainer?.name}, level=$level, captureDate=$captureDate)"
+    }
+}
